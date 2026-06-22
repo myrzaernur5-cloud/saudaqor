@@ -3,114 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOO SAUDAQOR-2050 | БИН 260140036511 | Ресми сайт</title>
-    <meta name="description" content="TOO SAUDAQOR-2050, БИН 260140036511. Руководитель: АЙТМОЛДА ЕЛДАР ДАНИЯРҰЛЫ. Прочая розничная торговля вне магазинов, Жетісу облысы.">
-    <meta name="keywords" content="саудакор, saadaqor, saudaqor-2050, БИН 260140036511, АЙТМОЛДА ЕЛДАР, ТОО, ЖШС">
+    <title>TOO SAUDAQOR-2050 | Официальный сайт компании</title>
+    <meta name="description" content="Официальный веб-ресурс ТОО SAUDAQOR-2050. БИН 260140036511. Информация о контрагенте, видах деятельности и контакты компании.">
+    <meta name="keywords" content="saudaqor, саудакор, БИН 260140036511, ТОО, ЖШС, Айтмолда Елдар Даниярұлы">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            --primary: #0f172a; /* Қою премиум түс */
+            --accent: #2563eb;  /* Көк батырмалар мен екпіндер */
+            --accent-hover: #1d4ed8;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
+
         body {
-            background-color: #f4f6f9;
-            color: #333;
+            background-color: var(--bg-light);
+            color: var(--text-main);
             line-height: 1.6;
-            padding: 20px;
+            -webkit-font-smoothing: antialiased;
         }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+        /* Навигациялық жолақ (Header) */
+        nav {
+            background: var(--card-bg);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        header {
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
+
+        .logo {
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--primary);
+            letter-spacing: -0.5px;
         }
-        h1 {
-            color: #2c3e50;
-            font-size: 24px;
-            margin-bottom: 5px;
+
+        .logo span {
+            color: var(--accent);
         }
-        .subtitle {
-            color: #7f8c8d;
-            font-size: 14px;
+
+        .status-badge {
+            background: #dcfce7;
+            color: #15803d;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
         }
-        .info-grid {
+
+        /* Басты бөлім (Hero Section) */
+        .hero {
+            max-width: 1100px;
+            margin: 60px auto 40px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* Негізгі блоктар (Grid) */
+        .main-grid {
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 { font-size: 30px; }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 25px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+
+        /* Деректер тізімі */
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid #f8fafc;
+        }
+
+        .data-row:last-child {
+            border-bottom: none;
+        }
+
+        .data-label {
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .data-value {
+            color: var(--primary);
+            font-size: 15px;
+            font-weight: 600;
+            text-align: right;
+            max-width: 60%;
+        }
+
+        /* Байланыс және жылдам әрекеттер */
+        .cta-box {
+            display: flex;
+            flex-direction: column;
             gap: 15px;
         }
-        .info-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-left: 4px solid #3498db;
-            border-radius: 4px;
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.2s ease;
         }
-        .label {
-            font-weight: bold;
-            color: #7f8c8d;
-            font-size: 12px;
-            text-transform: uppercase;
-            margin-bottom: 5px;
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
         }
-        .value {
-            font-size: 16px;
-            color: #2c3e50;
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
         }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: #fff;
+        }
+
+        .btn-whatsapp:hover {
+            background: #22c55e;
+            transform: translateY(-1px);
+        }
+
+        /* Футер */
         footer {
             text-align: center;
-            margin-top: 30px;
-            font-size: 12px;
-            color: #95a5a6;
+            padding: 40px 20px;
+            border-top: 1px solid #e2e8f0;
+            background: var(--card-bg);
+            color: var(--text-muted);
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>ЖШС "SAUDAQOR-2050" / ТОО "SAUDAQOR-2050"</h1>
-        <p class="subtitle">Контрагент туралы ресми ақпарат және байланыс деректері</p>
-    </header>
+    <nav>
+        <div class="logo">SAUDAQOR<span>2050</span></div>
+        <div class="status-badge">Белсенді компания (Активно)</div>
+    </nav>
 
-    <div class="info-grid">
-        <div class="info-item">
-            <div class="label">Компанияның толық атауы</div>
-            <div class="value">"SAUDAQOR-2050" ЖАУАПКЕРШІЛІГІ ШЕКТЕУЛІ СЕРІКТЕСТІГІ</div>
+    <section class="hero">
+        <h1>ТОО "SAUDAQOR-2050"</h1>
+        <p>Қазақстан Республикасындағы заңды тұлғаның ресми веб-визиткасы мен контрагент мәліметтері.</p>
+    </section>
+
+    <main class="main-grid">
+        <div class="card">
+            <div class="card-title">Ресми заңды мәліметтер</div>
+            
+            <div class="data-row">
+                <div class="data-label">Ұйымның атауы</div>
+                <div class="data-value">"SAUDAQOR-2050" Жауапкершілігі Шектеулі Серіктестігі</div>
+            </div>
+
+            <div class="data-row">
+                <div class="data-label">Бизнес-сәйкестендіру нөмірі (БИН)</div>
+                <div class="data-value" style="color: var(--accent); font-size: 16px;">260140036511</div>
+            </div>
+
+            <div class="data-row">
+                <div class="data-label">Бірінші басшы (Руководитель)</div>
+                <div class="data-value">АЙТМОЛДА ЕЛДАР ДАНИЯРҰЛЫ</div>
+            </div>
+
+            <div class="data-row">
+                <div class="data-label">Қызмет түрі (ОКЭД)</div>
+                <div class="data-value">47990 — Дүкеннен тыс басқа да бөлшек сауда</div>
+            </div>
+
+            <div class="data-row">
+                <div class="data-label">Заңды мекенжайы</div>
+                <div class="data-value">Жетісу облысы, Панфилов ауданы, Ынталы ауылы, Индекс 041300</div>
+            </div>
         </div>
 
-        <div class="info-item">
-            <div class="label">Бизнес-сәйкестендіру нөмірі (БИН / ИИН)</div>
-            <div class="value"><strong>260140036511</strong></div>
+        <div class="card" style="height: fit-content;">
+            <div class="card-title">Байланыс орталығы</div>
+            <div class="cta-box">
+                <a href="https://wa.me/77479081067" target="_blank" class="btn btn-whatsapp">
+                    WhatsApp-пен байланысу
+                </a>
+                <a href="mailto:info@saudaqor.kz" class="btn btn-primary" style="background: #334155;">
+                    Электронды пошта
+                </a>
+            </div>
         </div>
-
-        <div class="info-item">
-            <div class="label">Басшысы (Руководитель)</div>
-            <div class="value">АЙТМОЛДА ЕЛДАР ДАНИЯРҰЛЫ</div>
-        </div>
-
-        <div class="info-item">
-            <div class="label">Қызмет түрі (ОКЭД)</div>
-            <div class="value">47990 - Прочая розничная торговля вне магазинов (Дүкеннен тыс басқа да бөлшек сауда)</div>
-        </div>
-
-        <div class="info-item">
-            <div class="label">Заңды мекенжайы</div>
-            <div class="value">Индекс 041300, ЖЕТІСУ ОБЛЫСЫ, ПАНФИЛОВ АУДАНЫ, ЫНТАЛЫ АУЫЛЫ</div>
-        </div>
-    </div>
+    </main>
 
     <footer>
-        © 2026 TOO SAUDAQOR-2050. Барлық құқықтар қорғалған.
+        <p>© 2026 ТОО SAUDAQOR-2050. Все права защищены. Официальный веб-ресурс компании.</p>
     </footer>
-</div>
 
 </body>
 </html>
