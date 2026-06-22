@@ -3,288 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOO SAUDAQOR-2050 | Ресми веб-сайты</title>
-    <meta name="description" content="Официальный веб-ресурс ТОО SAUDAQOR-2050. БИН 260140036511. Информация о деятельности, официальные реквизиты и контакты компании.">
-    <meta name="keywords" content="saudaqor, саудакор, БИН 260140036511, ТОО, ЖШС, Айтмолда Елдар Даниярұлы">
+    <title>TOO SAUDAQOR-2050 | Басты бет</title>
+    <meta name="description" content="Официальный веб-сайт ТОО SAUDAQOR-2050. БИН 260140036511. Контрагент мәліметтері мен байланыс">
     
+    <script>
+        const WHATSAPP_PHONE = '77000000000'; // Мұнда өз Ватсап нөміріңді жаз
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary: #0f172a; 
-            --accent: #b59410;  /* Логотипке сай алтын түстес екпін */
-            --accent-hover: #94780d;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --bg-light: #f8fafc;
+            --primary: #101828; /* Қою премиум түс */
+            --accent: #d4af37;  /* Логотиптегі алтын түс */
+            --accent-hover: #b59410;
+            --text-main: #1d2939;
+            --text-muted: #667085;
+            --bg-light: #f9fafb;
             --card-bg: #ffffff;
+            --whatsapp-green: #25d366;
+            --mail-blue: #1570ef;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; }
 
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+        /* Навигация */
+        nav { background: var(--card-bg); padding: 16px 32px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(16,24,40,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo-block { display: flex; align-items: center; gap: 12px; }
+        
+        /* Кодқа енгізілген логотип */
+        .logo-wrapper { width: 44px; height: 44px; border-radius: 50%; background: radial-gradient(circle at center, #fff, var(--bg-light)); border: 2px solid var(--accent); overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; }
+        .logo-img-placeholder { font-size: 20px; color: var(--accent); font-weight: 700; transform: translateY(-1px); }
+        .logo-wrapper:after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-shadow: inset 0 0 8px rgba(212,175,55,0.4); border-radius: 50%; }
 
-        /* Навигация (Header) */
-        nav {
-            background: var(--card-bg);
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+        .logo-text { font-weight: 700; font-size: 18px; color: var(--primary); letter-spacing: -0.5px; }
+        .logo-text span { color: var(--accent); }
 
-        .logo-block {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--accent);
-        }
-
-        .logo-text {
-            font-weight: 700;
-            font-size: 20px;
-            color: var(--primary);
-            letter-spacing: -0.5px;
-        }
-
-        .logo-text span {
-            color: var(--accent);
-        }
-
-        .status-badge {
-            background: #dcfce7;
-            color: #15803d;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 500;
-        }
+        .status-badge { background: #ecfdf3; color: #027a48; padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; }
 
         /* Басты бөлім */
-        .hero {
-            max-width: 1100px;
-            margin: 50px auto 30px;
-            padding: 0 20px;
-            text-align: center;
-        }
+        .hero { max-width: 1000px; margin: 48px auto 32px; padding: 0 20px; text-align: center; }
+        .hero h1 { font-size: 38px; font-weight: 700; color: var(--primary); margin-bottom: 12px; letter-spacing: -1px; }
+        .hero p { font-size: 17px; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
 
-        .hero h1 {
-            font-size: 42px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-        }
+        /* Контент торы */
+        .main-grid { max-width: 1000px; margin: 0 auto 48px; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+        @media (max-width: 768px) { .main-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 30px; } }
 
-        .hero p {
-            font-size: 18px;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Контент құрылымы */
-        .main-grid {
-            max-width: 1100px;
-            margin: 0 auto 60px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-
-        @media (max-width: 768px) {
-            .main-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 30px; }
-        }
-
-        .card {
-            background: var(--card-bg);
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-            margin-bottom: 30px;
-        }
-
-        .card-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 20px;
-            border-bottom: 1px solid #f1f5f9;
-            padding-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+        .card { background: var(--card-bg); border: 1px solid #eaecf0; border-radius: 12px; padding: 24px; box-shadow: 0 1px 2px rgba(16,24,40,0.03); margin-bottom: 24px; }
+        .card-title { font-size: 18px; font-weight: 600; color: var(--primary); margin-bottom: 20px; border-bottom: 1px solid #f2f4f7; padding-bottom: 12px; display: flex; align-items: center; gap: 10px; }
 
         /* Деректер жолдары */
-        .data-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 14px 0;
-            border-bottom: 1px solid #f8fafc;
-        }
-
+        .data-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f9fafb; gap: 10px; }
         .data-row:last-child { border-bottom: none; }
-        .data-label { color: var(--text-muted); font-size: 14px; font-weight: 500; }
-        .data-value { color: var(--primary); font-size: 15px; font-weight: 600; text-align: right; max-width: 60%; }
+        .data-label { color: var(--text-muted); font-size: 14px; font-weight: 500; white-space: nowrap; }
+        .data-value { color: var(--primary); font-size: 14px; font-weight: 600; text-align: right; }
 
-        /* Тауарлар бөлімі */
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 10px;
-        }
+        /* Тауарлар торы */
+        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+        @media (max-width: 480px) { .services-grid { grid-template-columns: 1fr; } }
+        .service-item { background: #f9fafb; border: 1px solid #eaecf0; padding: 12px; border-radius: 8px; font-size: 13px; font-weight: 500; color: var(--text-main); display: flex; align-items: center; gap: 8px; }
 
-        @media (max-width: 480px) {
-            .services-grid { grid-template-columns: 1fr; }
-        }
-
-        .service-item {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--text-main);
-        }
-
-        /* Батырмалар */
-        .cta-box { display: flex; flex-direction: column; gap: 15px; }
+        /* Батырмалар блоктары */
+        .cta-box { display: flex; flex-direction: column; gap: 12px; }
         
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
+        .btn { display: flex; align-items: center; justify-content: center; padding: 12px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.2s ease; border: 1px solid transparent; }
+        
+        .btn-whatsapp { background-color: var(--whatsapp-green); color: #fff; }
+        .btn-whatsapp:hover { background-color: #22c55e; transform: translateY(-1px); }
+        
+        .btn-mail { background-color: var(--card-bg); color: var(--primary); border-color: #d0d5dd; }
+        .btn-mail:hover { background-color: #f9fafb; border-color: #b3b9c2; }
+        
+        .btn-copy { background-color: var(--card-bg); color: var(--mail-blue); border: none; font-size: 12px; font-weight: 600; cursor: pointer; padding: 4px 8px; }
+        .btn-copy:hover { color: #1155cc; }
 
-        .btn-whatsapp { background: #25d366; color: #fff; }
-        .btn-whatsapp:hover { background: #22c55e; transform: translateY(-1px); }
-        .btn-mail { background: #334155; color: #fff; }
-        .btn-mail:hover { background: #1e293b; transform: translateY(-1px); }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid #e2e8f0;
-            background: var(--card-bg);
-            color: var(--text-muted);
-            font-size: 14px;
-        }
+        footer { text-align: center; padding: 32px 20px; border-top: 1px solid #eaecf0; background: var(--card-bg); color: var(--text-muted); font-size: 13px; }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="logo-block">
-            <img src="logo.jpg" alt="SAUDAQOR" class="logo-img" onerror="this.style.display='none'">
+            <div class="logo-wrapper">
+                <div class="logo-img-placeholder">S20</div>
+            </div>
             <div class="logo-text">SAUDAQOR<span>2050</span></div>
         </div>
-        <div class="status-badge">Белсенді серіктес</div>
+        <div class="status-badge">Активно</div>
     </nav>
 
     <section class="hero">
         <h1>ТОО "SAUDAQOR-2050"</h1>
-        <p>Сенімді саудалық және коммерциялық қызмет көрсету серіктесі. Қазақстан Республикасы заңды тұлғасының ресми парақшасы.</p>
+        <p>Қазақстан Республикасындағы заңды тұлғаның ресми веб-визиткасы мен контрагент мәліметтері.</p>
     </section>
 
     <main class="main-grid">
         <div>
             <div class="card">
-                <div class="card-title">Ресми заңды мәліметтер</div>
+                <div class="card-title">Официальные сведения</div>
                 <div class="data-row">
-                    <div class="data-label">Ұйымның толық атауы</div>
-                    <div class="data-value">"SAUDAQOR-2050" Жауапкершілігі Шектеулі Серіктестігі</div>
+                    <div class="data-label">Полное наименование</div>
+                    <div class="data-value">ТОО "SAUDAQOR-2050" / ЖШС "SAUDAQOR-2050"</div>
                 </div>
                 <div class="data-row">
-                    <div class="data-label">Бизнес-сәйкестендіру нөмірі (БИН)</div>
-                    <div class="data-value" style="color: var(--accent); font-size: 16px;">260140036511</div>
+                    <div class="data-label">БИН / ИИН</div>
+                    <div class="data-value" style="color: var(--mail-blue); font-size: 15px;">260140036511</div>
                 </div>
                 <div class="data-row">
-                    <div class="data-label">Басшысы (Руководитель)</div>
+                    <div class="data-label">Руководитель</div>
                     <div class="data-value">АЙТМОЛДА ЕЛДАР ДАНИЯРҰЛЫ</div>
                 </div>
                 <div class="data-row">
-                    <div class="data-label">Мекенжайы</div>
-                    <div class="data-value">Жетісу облысы, Панфилов ауданы, Ынталы ауылы, 041300</div>
+                    <div class="data-label">Юридический адрес</div>
+                    <div class="data-value">ОБЛАСТЬ ЖЕТІСУ, ПАНФИЛОВСКИЙ РАЙОН, ЫНТАЛЫ АУЫЛЫ</div>
                 </div>
             </div>
 
             <div class="card">
-                <div class="card-title">Банк деректемелері (Реквизиты)</div>
+                <div class="card-title">Банк реквизиттері мен ОКЭД</div>
                 <div class="data-row">
                     <div class="data-label">Бенефициар банкі</div>
                     <div class="data-value">АО "Kaspi Bank" / АО "Halyk Bank"</div>
                 </div>
                 <div class="data-row">
-                    <div class="data-label">Қызмет түрі (ОКЭД)</div>
-                    <div class="data-value">47990 — Дүкеннен тыс басқа да бөлшек сауда</div>
+                    <div class="data-label">Вид деятельности (ОКЭД)</div>
+                    <div class="data-value">47990 — Прочая розничная торговля вне магазинов</div>
                 </div>
                 <div class="data-row">
-                    <div class="data-label">Келісімшарттар бөлімі</div>
-                    <div class="data-value" style="font-weight: 500; color: var(--text-muted);">Сұраныс бойынша қолжетімді</div>
+                    <div class="data-label">Келісімшарттар</div>
+                    <div class="data-value" style="font-weight: 500; color: var(--text-muted);">Типтік келісімшарт қолжетімді</div>
                 </div>
             </div>
 
             <div class="card">
-                <div class="card-title">Қызмет бағыттары мен Тауарлар</div>
+                <div class="card-title">Направления деятельности</div>
                 <div class="services-grid">
-                    <div class="service-item">📦 Дистанциялық бөлшек сауда</div>
-                    <div class="service-item">🌐 Онлайн-тапсырыстарды өңдеу</div>
-                    <div class="service-item">🚚 Серіктестік тауар жеткізілімі</div>
-                    <div class="service-item">💼 Коммерциялық контракттар</div>
+                    <div class="service-item">📦 Коммерциялық сауда</div>
+                    <div class="service-item">🚚 Жеткізу және логистика</div>
+                    <div class="service-item">🤝 Тауарлық делдалдық</div>
+                    <div class="service-item">📝 Контракттық жеткізілімдер</div>
                 </div>
             </div>
         </div>
 
         <div>
             <div class="card" style="position: sticky; top: 100px;">
-                <div class="card-title">Байланыс орталығы</div>
+                <div class="card-title">Контакты и Связь</div>
                 <div class="cta-box">
-                    <a href="https://wa.me/77000000000" target="_blank" class="btn btn-whatsapp">
+                    <a href="#" id="wa_btn" target="_blank" class="btn btn-whatsapp">
                         🟢 WhatsApp Желісі
                     </a>
                     <a href="mailto:info@saudaqor.kz" class="btn btn-mail">
-                        ✉️ Электронды пошта
+                        ✉️ info@saudaqor.kz
                     </a>
+                    <button class="btn btn-copy" onclick="copyBin('260140036511')">📋 БИН көшіру</button>
                 </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>© 2026 ТОО SAUDAQOR-2050. Барлық құқықтар қорғалған. Ресми веб-визитка.</p>
+        <p>© 2026 ТОО SAUDAQOR-2050. Барлық құқықтар қорғалған.</p>
     </footer>
+
+    <script>
+        // Ватсап батырмасын баптау
+        document.getElementById('wa_btn').href = "https://wa.me/" + WHATSAPP_PHONE;
+
+        // БИН көшіру функциясы
+        function copyBin(bin) {
+            navigator.clipboard.writeText(bin).then(function() {
+                alert("БИН нөмірі (260140036511) көшірілді!");
+            }, function(err) {
+                console.error('Көшіру мүмкін болмады: ', err);
+            });
+        }
+    </script>
 
 </body>
 </html>
